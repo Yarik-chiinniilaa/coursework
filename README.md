@@ -41,9 +41,9 @@
 
 3. **Скомпілюйте проєкт**  
    - Для Windows (MinGW):
-     ```bash
-     g++ main.cpp -o calculator.exe -lsfml-graphics -lsfml-window -lsfml-system
-     ```
+  ```bash
+  g++ main.cpp -o calculator.exe -lsfml-graphics -lsfml-window -lsfml-system
+  ```
 
 4. **Запуск**  
    ```bash
