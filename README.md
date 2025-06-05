@@ -22,7 +22,7 @@
 
 ## Вимоги до запуску 🛠️
 
-- Операційна система: **Windows**
+- Операційна система: **Windows**, **Linux** або **macOS**
 - Компілятор C++ (GCC, MSVC, Clang)
 - **SFML** версії 2.5 або новіша
 
@@ -35,15 +35,19 @@
 
 2. **Склонуйте цей репозиторій**  
    ```bash
-    git clone https://github.com/Yarik-chiinniilaa/coursework.git
-    cd coursework
+   git clone https://github.com/Yarik-chiinniilaa/coursework.git
+   cd coursework
    ```
 
 3. **Скомпілюйте проєкт**  
+   - Для Linux/Mac:
+     ```bash
+     g++ main.cpp -o calculator -lsfml-graphics -lsfml-window -lsfml-system
+     ```
    - Для Windows (MinGW):
-  ```bash
-  g++ main.cpp -o calculator.exe -lsfml-graphics -lsfml-window -lsfml-system
-  ```
+     ```bash
+     g++ main.cpp -o calculator.exe -lsfml-graphics -lsfml-window -lsfml-system
+     ```
 
 4. **Запуск**  
    ```bash
@@ -76,11 +80,10 @@ SFML — це сучасна кросплатформена бібліотека
 
 ## Автор ✍️
 
-Полиба Ярослав, студент групи 24
+Полиба Ярослав студент групи 24
 
 ---
 
 ## Ліцензія 📄
 
 Проєкт поширюється під ліцензією **MIT**.
-  —Переглядом історії обчислень
