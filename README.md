@@ -23,7 +23,7 @@
 ## Вимоги до запуску 🛠️
 
 - Операційна система: **Windows**
-- Компілятор C++ (GCC, MSVC, Clang)
+- Компілятор C++ (GCC, MSVC)
 - **SFML** версії 2.5 або новіша
 
 ---
@@ -40,14 +40,14 @@
    ```
 
 3. **Скомпілюйте проєкт**  
-   - Для Windows (MinGW):
-     ```bash
-     g++ main.cpp -o calculator.exe -lsfml-graphics -lsfml-window -lsfml-system
-     ```
+   Для Windows (MinGW):
+   ```bash
+   g++ main.cpp -o calculator.exe -lsfml-graphics -lsfml-window -lsfml-system
+   ```
 
 4. **Запуск**  
    ```bash
-   ./calculator
+   ./calculator.exe
    ```
 
 ---
@@ -68,6 +68,56 @@ _Приклад вигляду графічного калькулятора:_
 
 ---
 
+## Вихідний код компонента (Calculator.h) 👇
+
+```cpp
+#ifndef CALCULATOR_H
+#define CALCULATOR_H
+
+#include <string>
+#include <stack>
+#include <stdexcept>
+#include <cmath>
+
+class Calculator {
+public:
+    Calculator() : currentValue("0"), lastOperator(' '), isNewEntry(true) {}
+
+    // Обробка введення символу (цифри, точки або операції)
+    void input(char c);
+
+    // Отримати поточне значення для відображення
+    std::string getDisplay() const { return currentValue; }
+
+    // Скинути калькулятор
+    void clear() {
+        currentValue = "0";
+        lastOperator = ' ';
+        isNewEntry = true;
+        operands = std::stack<double>();
+        operators = std::stack<char>();
+    }
+
+private:
+    std::string currentValue;
+    char lastOperator;
+    bool isNewEntry;
+    std::stack<double> operands;
+    std::stack<char> operators;
+
+    void calculate();
+    int precedence(char op);
+    double applyOp(double a, double b, char op);
+};
+
+#endif // CALCULATOR_H
+```
+
+> Повний вихідний код та інші компоненти доступні у публічному репозиторії:  
+> [https://github.com/Yarik-chiinniilaa/coursework](https://github.com/Yarik-chiinniilaa/coursework)
+
+---
+
 ## Чому саме SFML? 🤔
 
 SFML — це сучасна кросплатформена бібліотека, яка спрощує розробку графічних програм на C++. Вона проста у використанні, підтримує роботу з графікою, подіями, аудіо, що робить її ідеальним вибором для студентських проєктів.
@@ -76,7 +126,7 @@ SFML — це сучасна кросплатформена бібліотека
 
 ## Автор ✍️
 
-Полиба Ярослав студент групи 24
+Полиба Ярослав, студент групи 24
 
 ---
 
