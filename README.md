@@ -35,8 +35,8 @@
 
 2. **Склонуйте цей репозиторій**  
    ```bash
-   git clone https://github.com/Yarik-chiinniilaa/coursework.git
-   cd coursework
+    git clone https://github.com/Yarik-chiinniilaa/coursework.git
+    cd coursework
    ```
 
 3. **Скомпілюйте проєкт**  
