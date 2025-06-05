@@ -22,7 +22,7 @@
 
 ## Вимоги до запуску 🛠️
 
-- Операційна система: **Windows**, **Linux** або **macOS**
+- Операційна система: **Windows**
 - Компілятор C++ (GCC, MSVC, Clang)
 - **SFML** версії 2.5 або новіша
 
@@ -40,10 +40,6 @@
    ```
 
 3. **Скомпілюйте проєкт**  
-   - Для Linux/Mac:
-     ```bash
-     g++ main.cpp -o calculator -lsfml-graphics -lsfml-window -lsfml-system
-     ```
    - Для Windows (MinGW):
      ```bash
      g++ main.cpp -o calculator.exe -lsfml-graphics -lsfml-window -lsfml-system
